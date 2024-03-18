@@ -1,0 +1,45 @@
+
+
+.main{
+    position: relative;
+    text-align: center;
+    font-size: large;
+    top: 100px;
+}
+.rock-3d-regular {
+    font-family: "Rock 3D", system-ui;
+    font-weight: 800;
+    font-style: normal;
+  }
+  
+.user-space{
+    position: relative;
+    width: 400px;
+    height:300px;
+    background-color: rgb(164, 151, 193);
+    border-radius: 20px;
+}
+
+.input{
+    position: relative;
+    top:10px;
+    left:10px;
+   
+}
+
+input[type="text"] {
+    display: block;
+  
+
+  
+    font-size: 2rem;
+  
+    width: 380px;
+  
+    color: white;
+    background: none;
+  
+    border: none;
+    border-radius: 0;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+  }
