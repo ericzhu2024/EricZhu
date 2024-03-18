@@ -17,48 +17,6 @@
         </div>
         <a href="javascript: location.reload();"><img src="reload.jpeg" alt="my picture" class="icon"/></a>
         <h1>Hi, my name is Eric Zhu, a junior student studying Electrical Engineering and Computer Science at UC, Berkeley. I mainly focus on CS courseworks and my career interest is Software Engineer. Feel free to connect!</h1>
-        <div class="user-space">
-            <div class="input">
-              <h2>Free Space</h2>
-              <input
-                type="text"
-                id="typing"
-                name="typing"
-                placeholder="Type something here"
-              />
-            </div>
-            <p class="counter">21 character left</p>
-            <div class="input">
-              <h2>What color do you like?</h2>
-              <input
-                type="text"
-                id="color"
-                name="color"
-                placeholder="gray"
-              />
-            </div>
-        </div>
-        <script>
-            const typing = document.getElementById("typing");
-            const color = document.getElementById("color");
-            var spaceAvailable = (21 - typing.value.length);
-            const message = document.getElementsByClassName("counter")[0];
-            const context = document.getElementsByTagName("input")
-        
 
-            typing.addEventListener('keyup', function(e) {
-                spaceAvailable = (21 - typing.value.length)
-                if(spaceAvailable < 0 ){
-                    typing.value = typing.value.slice(0,21);
-                    spaceAvailable = 0;
-                }
-                message.innerHTML= spaceAvailable + " characters left";
-             
-  })
-            color.addEventListener('keyup',function(e){
-                context[0].style.color = color.value;
-                context[1].style.color = color.value;
-            })
-        </script>
     </body>
 </html>
