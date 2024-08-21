@@ -1,0 +1,20 @@
+
+body{
+  background-color: black;
+}
+
+h1{
+  color: white;
+}
+
+.name {
+  text-align: center;
+  font-size: 5em; 
+  position: relative;
+  top: 50px; 
+}
+
+.full-page {
+  width: 100vw; /* 100% of the viewport width */
+  height: 100vh; /* 100% of the viewport height */
+}
