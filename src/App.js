@@ -6,7 +6,9 @@ import  SideButtons  from "./SideButtons"
 function App() {
   return (
     <div>
+      <SideButtons />
       <Pages />
+     
     </div>
   );
 }
