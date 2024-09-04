@@ -3,6 +3,16 @@ body{
   background-color: black;
 }
 
+button{
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  font-size: 35px;
+ 
+
+}
+
+
 h1{
   color: white;
 }
@@ -25,4 +35,18 @@ p{
 .full-page {
   width: 100vw; /* 100% of the viewport width */
   height: 100vh; /* 100% of the viewport height */
+}
+
+
+.about-me{
+position: relative;
+left: 45%;
+
+}
+
+
+.text-container {
+  width: 40%;
+  border: 1px solid black;
+  word-break: break-all;
 }
