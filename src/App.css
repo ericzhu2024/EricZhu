@@ -1,52 +1,236 @@
 
-body{
-  background-color: black;
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-button{
-  border-radius: 50%;
-  width: 70px;
-  height: 70px;
-  font-size: 35px;
- 
-
+html {
+  font-size: 62.5%;
 }
 
+:root {
+  --green-color: #43ba7f;
+  --orange-color: #ff511a;
+  --lightBlue-color: #add8e6;
+  --whiteColor: #ffffff;
+  --yelloGreen-color: #9acd32;
+  --box-shadow: 0 0 1.5rem rgba(0 0 0 / 0.1);
+}
 
-h1{
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+  transition: color 0.3s ease-in-out;
+}
+
+a:hover,
+a.active {
   color: white;
 }
 
-ul{
-  color:white;
+.container {
+  max-width: 1170px;
+  padding: 0 1.5rem;
+  margin-inline: auto;
 }
 
-p{
-  color:white;
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.5rem 0;
+  background-color: rgb(88, 87, 87);
+  box-shadow: var(--box-shadow);
+  transition: padding 0.3s ease-in-out;
 }
 
-.title {
-  text-align: center;
-  font-size: 5em; 
+nav.scrolled {
+  padding: 2rem 0;
+}
+
+nav .container .row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav .container .row .logo {
+  font-size: 2rem;
+}
+
+nav .container .row .menu-bar {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+nav .container .row .menu-bar li a {
+  text-transform: capitalize;
+  font-size: 1.8rem;
+}
+
+section {
+  padding: 12rem 0;
+  text-align: left;
+  font-size: 5rem;
+  /* text-transform: uppercase; */
+  min-height: 100vh;
+  display: block;  /* it was flex*/
+  align-items: center;
+  justify-content: center;
+  color: var(--whiteColor);
+}
+
+#main {
+  height: calc(100vh - 6rem);
+  background-color: black;
+}
+
+#about {
+  background-color: var(--orange-color);
+}
+
+#skills {
+  background-color: var(--green-color);
+}
+#resume {
+  background-color: var(--lightBlue-color);
+}
+#contact {
+  background-color: var(--yelloGreen-color);
+}
+
+
+.typing{
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  /* min-height: 100vh; */
+  padding-top: 200px;
+}
+
+.wrapper{
+  display: block;
+}
+
+.wrapper .static-txt{
+  color: #fff;
+  font-size: 60px;
+  font-weight: 400;
+}
+
+.wrapper .dynamic-txts{
+  margin-left: 15px;
+  height: 90px;
+  line-height: 90px;
+  overflow: hidden;
+}
+
+.dynamic-txts li{
+  color: #9f3411;
+  list-style: none;
+  font-size: 60px;
+  font-weight: 500;
   position: relative;
-  top: 50px; 
+  top:0;
+  animation: slide 9s steps(3) infinite;
 }
 
-.full-page {
-  width: 100vw; /* 100% of the viewport width */
-  height: 100vh; /* 100% of the viewport height */
+@keyframes slide {
+  100%{
+    top:-270px;
+  }
+  
+}
+
+.dynamic-txts li span::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #010101;
+  border-left: 2px solid white;
+  animation: typing 3s steps(15) infinite;
+}
+
+@keyframes typing {
+  100%{
+    left: 100%;
+    margin: 0 -35px 0 35px;
+  }
+  
 }
 
 
-.about-me{
-position: relative;
-left: 45%;
+.ledouter{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative; /* or static, depending on your layout needs */
+  display: block;
+}
+
+.ledbody{
+  display:block;
+  justify-content: center;
+  /* align-items: center; */
+  /* min-height: 100vh; */
+  height: 20px;
 
 }
 
+.led{
+  position: relative;
+  display: flex;
+  height: 20px;
+  justify-content: center;
+}
 
-.text-container {
-  width: 40%;
-  border: 1px solid black;
-  word-break: break-all;
+.led span{
+  position: relative;
+  width: 50px;
+  height: 10px;
+}
+
+.led span::before{
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: #0f0;
+  box-shadow: 0 0 5px #0f0,
+  0 0 15px #0f0,
+  0 0 30px #0f0,
+  0 0 50px #0f0;
+  animation: animate 8s linear infinite;
+  animation-delay: calc(var(--i)* 0.1s);
+}
+
+@keyframes animate {
+  0%{
+    transform-origin: 0 20px;
+    filter: hue-rotate(0deg);
+  }
+  20%{
+    transform: rotate(calc(-90deg * var(--i)));
+  }
+  60%{
+    transform: rotate(calc(0deg * var(--i)));
+  }
+  100%{
+    filter: hue-rotate(calc(360deg));
+  }
 }

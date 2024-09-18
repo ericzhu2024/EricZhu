@@ -1,16 +1,18 @@
-
 import './App.css';
-import Pages from './Pages'
-import  SideButtons  from "./SideButtons"
-
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Home } from './pages/home';
+//import { NavBar } from './component/navBar/navBar';
 function App() {
   return (
-    <div>
-      <SideButtons />
-      <Pages />
-     
+    <div className="App">
+      <Router>
+        {/* <NavBar /> */}
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/EricZhu' element={<Home />} />
+        </Routes>
+      </Router>
     </div>
   );
 }
-
 export default App;
