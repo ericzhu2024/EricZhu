@@ -3,7 +3,7 @@ export const About = () => {
   return (
     <div>
       <section id='about'>
-        about
+        About Me
       </section>
     </div>
     
